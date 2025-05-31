@@ -39,7 +39,7 @@ body {
 
 /* Hero */
 header.hero {
-    background: url('img/background.jpeg') center/cover no-repeat;
+    background: url('background.jpeg') center/cover no-repeat;
     text-align: center;
     padding: 120px 20px;
     color: var(--rosa);
