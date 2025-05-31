@@ -3,61 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Louyse Andrade - Advogada Criminal</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Louise Andrade - Advogada Criminal</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
+    <!-- Barra superior -->
+    <div class="top-bar">
+        <button onclick="toggleDarkMode()">🌙/☀️</button>
+        <button onclick="toggleLanguage()">PT | EN</button>
+    </div>
+
+    <!-- Cabeçalho -->
+    <header class="hero">
         <div class="container">
-            <h1>Louyse Andrade</h1>
-            <p>Advogada Criminal</p>
+            <img src="img/logo.png" alt="Logo Louise Andrade" class="logo">
+            <h1 data-pt="Louise Andrade" data-en="Louise Andrade">Louise Andrade</h1>
+            <p data-pt="Advogada Criminal" data-en="Criminal Lawyer">Advogada Criminal</p>
             <nav>
                 <ul>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#atuacao">Áreas de Atuação</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#sobre" data-pt="Sobre" data-en="About">Sobre</a></li>
+                    <li><a href="#atuacao" data-pt="Atuação" data-en="Practice">Atuação</a></li>
+                    <li><a href="#contato" data-pt="Contato" data-en="Contact">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- Seção Sobre -->
     <section id="sobre">
         <div class="container">
-            <h2>Sobre</h2>
-            <p>Sou Louyse Andrade, advogada criminal especializada na defesa dos direitos e garantias fundamentais. Trabalho com ética, comprometimento e dedicação, buscando sempre a melhor solução para meus clientes.</p>
+            <h2 data-pt="Sobre" data-en="About">Sobre</h2>
+            <p data-pt="Sou Louise Andrade, advogada criminal especializada na defesa dos direitos e garantias fundamentais. Trabalho com ética, comprometimento e dedicação, buscando sempre a melhor solução para meus clientes." 
+               data-en="I am Louise Andrade, a criminal lawyer specialized in defending fundamental rights and guarantees. I work with ethics, commitment, and dedication, always seeking the best solution for my clients.">
+            </p>
         </div>
     </section>
 
+    <!-- Seção Áreas de Atuação -->
     <section id="atuacao">
         <div class="container">
-            <h2>Áreas de Atuação</h2>
+            <h2 data-pt="Áreas de Atuação" data-en="Practice Areas">Áreas de Atuação</h2>
             <ul class="areas">
-                <li>Defesa Criminal</li>
-                <li>Tribunal do Júri</li>
-                <li>Crimes contra a honra</li>
-                <li>Medidas cautelares</li>
-                <li>Execução Penal</li>
-                <li>Habeas Corpus</li>
+                <li data-pt="Defesa Criminal" data-en="Criminal Defense">Defesa Criminal</li>
+                <li data-pt="Tribunal do Júri" data-en="Jury Court">Tribunal do Júri</li>
+                <li data-pt="Crimes contra a honra" data-en="Crimes Against Honor">Crimes contra a honra</li>
+                <li data-pt="Medidas cautelares" data-en="Precautionary Measures">Medidas cautelares</li>
+                <li data-pt="Execução Penal" data-en="Criminal Execution">Execução Penal</li>
+                <li data-pt="Habeas Corpus" data-en="Habeas Corpus">Habeas Corpus</li>
             </ul>
         </div>
     </section>
 
+    <!-- Seção Contato -->
     <section id="contato">
         <div class="container">
-            <h2>Contato</h2>
-            <p>Entre em contato para agendar uma consulta.</p>
-            <p><strong>Email:</strong> louyse.andrade@adv.br</p>
-            <p><strong>Telefone:</strong> (00) 00000-0000</p>
-            <a class="botao" href="https://wa.me/5500000000000" target="_blank">Fale pelo WhatsApp</a>
+            <h2 data-pt="Contato" data-en="Contact">Contato</h2>
+            <p data-pt="Entre em contato para agendar uma consulta." 
+               data-en="Get in touch to schedule a consultation."></p>
+
+            <form>
+                <input type="text" placeholder="Nome / Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Mensagem / Message" required></textarea>
+                <button type="submit" data-pt="Enviar" data-en="Send">Enviar</button>
+            </form>
+
+            <p><strong>Email:</strong> louise.andrade@adv.br</p>
+            <p><strong>Telefone:</strong> (00) 91234-5678</p>
+            <a class="botao" href="https://wa.me/5500000000000" target="_blank">WhatsApp</a>
+
+            <!-- Google Maps -->
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." 
+                    width="100%" height="250" style="border:0;" 
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Desenvolvido por Cryslaine Pereira - Todos os direitos reservados.</p>
+            <p>&copy; 2025 Louise Andrade - Todos os direitos reservados.</p>
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
-              </html>
+</html>
