@@ -1,37 +1,67 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --rosa: #d8a7b1;
+    --preto: #000000;
+    --dourado: #c5a253;
+    --claro: #fdfdfd;
+    --escuro: #121212;
+    --texto: #000;
+    --bg: #fdfdfd;
 }
 
 body {
     font-family: 'Georgia', serif;
-    background-color: #fdfdfd;
-    color: #000;
-    line-height: 1.6;
+    background-color: var(--bg);
+    color: var(--texto);
+    margin: 0;
 }
 
-/* Cabeçalho */
-header {
-    background-color: #000;
-    color: #d8a7b1;
-    padding: 40px 0;
+/* Top bar */
+.top-bar {
+    background-color: var(--preto);
+    color: var(--rosa);
+    padding: 5px 20px;
+    text-align: right;
+}
+
+.top-bar button {
+    background: var(--dourado);
+    border: none;
+    color: var(--preto);
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.top-bar button:hover {
+    background-color: var(--rosa);
+}
+
+/* Hero */
+header.hero {
+    background: url('img/background.jpg') center/cover no-repeat;
     text-align: center;
+    padding: 120px 20px;
+    color: var(--rosa);
 }
 
-header h1 {
-    font-size: 3em;
-    color: #c5a253;
+header.hero .logo {
+    width: 120px;
+    margin-bottom: 15px;
 }
 
-header p {
-    font-size: 1.2em;
-    margin-top: 5px;
+header.hero h1 {
+    color: var(--dourado);
+    font-size: 3.2em;
+}
+
+header.hero p {
+    font-size: 1.3em;
 }
 
 nav ul {
     list-style: none;
+    padding: 0;
     margin-top: 20px;
 }
 
@@ -41,13 +71,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #d8a7b1;
+    color: var(--rosa);
     text-decoration: none;
     font-weight: bold;
 }
 
 nav ul li a:hover {
-    color: #c5a253;
+    color: var(--dourado);
 }
 
 /* Seções */
@@ -61,59 +91,82 @@ section {
     margin: auto;
 }
 
-/* Títulos */
 h2 {
-    color: #c5a253;
+    color: var(--dourado);
     margin-bottom: 20px;
     font-size: 2em;
-    border-bottom: 2px solid #d8a7b1;
+    border-bottom: 2px solid var(--rosa);
     display: inline-block;
-    padding-bottom: 5px;
 }
 
-/* Sobre */
-#sobre p {
-    font-size: 1.1em;
-}
-
-/* Áreas de atuação */
+/* Lista de atuação */
 .areas {
     list-style: none;
     padding: 0;
 }
 
 .areas li {
-    background-color: #d8a7b1;
-    color: #000;
+    background-color: var(--rosa);
+    color: var(--preto);
     padding: 10px;
     margin-bottom: 10px;
-    border-left: 5px solid #c5a253;
+    border-left: 5px solid var(--dourado);
 }
 
 /* Contato */
-#contato p {
+form {
+    margin: 20px 0;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
     margin-bottom: 10px;
+    border: 1px solid var(--dourado);
+    border-radius: 5px;
+}
+
+form button {
+    background-color: var(--dourado);
+    color: var(--preto);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--rosa);
 }
 
 .botao {
     display: inline-block;
-    background-color: #c5a253;
-    color: #000;
+    background-color: var(--dourado);
+    color: var(--preto);
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 25px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+    margin-top: 10px;
 }
 
 .botao:hover {
-    background-color: #d8a7b1;
+    background-color: var(--rosa);
+}
+
+.mapa {
+    margin-top: 20px;
 }
 
 /* Rodapé */
 footer {
-    background-color: #000;
-    color: #d8a7b1;
+    background-color: var(--preto);
+    color: var(--rosa);
     text-align: center;
     padding: 20px 0;
+}
+
+/* Modo escuro */
+body.dark {
+    --bg: var(--escuro);
+    --texto: var(--claro);
 }
